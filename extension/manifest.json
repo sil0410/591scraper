@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "591 Scraper Helper",
+  "version": "0.1.0",
+  "description": "Extract listings data from 591 pages via DOM or network responses.",
+  "permissions": ["storage", "activeTab", "downloads"],
+  "host_permissions": ["https://rent.591.com.tw/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "591 Scraper Helper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://rent.591.com.tw/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["https://rent.591.com.tw/*"]
+    }
+  ]
+}

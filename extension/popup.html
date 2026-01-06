@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>591 Scraper Helper</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header>
+        <h1>591 Scraper Helper</h1>
+        <p class="subtitle">Export listings from the current tab.</p>
+      </header>
+
+      <section class="controls">
+        <label class="toggle">
+          <input id="enable-scrape" type="checkbox" />
+          <span>Enable scraping after interaction</span>
+        </label>
+        <button id="scrape-dom" class="secondary">Capture DOM now</button>
+      </section>
+
+      <section class="stats">
+        <div>
+          <span class="label">Stored listings</span>
+          <strong id="record-count">0</strong>
+        </div>
+        <div>
+          <span class="label">Last updated</span>
+          <strong id="last-updated">--</strong>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="export-json">Export JSON</button>
+        <button id="export-csv">Export CSV</button>
+        <button id="clear-data" class="danger">Clear</button>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
